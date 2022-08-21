@@ -1,0 +1,69 @@
+.APODContainer {
+  width: 60vw;
+  background-color: var(--primary-color);
+  backdrop-filter: blur(100px);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 3rem;
+  padding: 2rem; 
+}
+
+.APODContainer header {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.APODContainer header input:focus {
+  outline: none;
+  backdrop-filter: none;
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.2);
+}
+
+.APODContainer header input::-webkit-calendar-picker-indicator{
+  display: none;
+}
+
+.APODContainer header input,
+.APODContainer header button {
+  width: 9rem;
+  height: 3rem;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 0.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.APODContainer header input:hover,
+.APODContainer header button:hover {
+  backdrop-filter: none;
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.2);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content p:nth-child(3) {
+  font-size: 0.85rem;
+}
+
+.content p:nth-last-child(1) {
+  width: 90%;
+}
