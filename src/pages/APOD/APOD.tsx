@@ -6,10 +6,9 @@ import './APOD.css'
 export function APOD() {
   const [data, setData] = useState<TDataAPOD>({} as TDataAPOD)
   // const [date,setDate] = useState<TDateAPOD>({} as TDateAPOD)
-  let date = ''
-
+  
   async function fetchAPI() {  
-    await fetch(`https://api.nasa.gov/planetary/apod?api_key=KUmvc5mhapfLsYHNZI1W4F0U8chHBi9Ig5lFNyxm${date ? `&date=${date}` : ""}`)
+    await fetch(`https://api.nasa.gov/planetary/apod?api_key=KUmvc5mhapfLsYHNZI1W4F0U8chHBi9Ig5lFNyxm${date ? `&date=${date}` : ""}&thumbs=true`)
     .then(response => response.json())
     .then(data => {
       setData(data)
@@ -25,27 +24,30 @@ export function APOD() {
     // setDate({})
     fetchAPI()
   } 
-
+  
+  let date = ''
   function randomDate () {
-    const minDayMonth = 1
-    const maxDay = 28
-    const maxMonth = 12
-    const minYear = 1995
-    const maxYear = 2021
-    const randomDay = minDayMonth + Math.random() * (maxDay - minDayMonth)
-    const randomMonth = minDayMonth + Math.random() * (maxMonth - minDayMonth)
-    const randomYear = minYear + Math.random() * (maxYear - minYear)
+    let dateYear = new Date () 
+    let year = dateYear.getFullYear()-1;
+    const randomDay = 1 + Math.random() * (30 - 1)
+    const randomMonth = 1 + Math.random() * (12 - 1)
+    const randomYear = 1996 + Math.random() * (year - 1996)
     const randomDate = `${Math.round(randomYear)}-${Math.round(randomMonth)}-${Math.round(randomDay)}`
     // setDate(randomDate)
     date = randomDate
     fetchAPI()
   }
 
+  let mediaType:any = ''
+  if (data.media_type == 'image') {
+    mediaType = <img src={data.hdurl} />
+  } else mediaType = <iframe src={data.url}></iframe>
+
+
   return (
     <div className='APODContainer'>
       <header>
-        <input type="date" name="" id="awa" min="1995-06-15" max={getCurrentDate()} pattern="\d{4}-\d{2}-\d{2}" onChange={(e) => date = e.currentTarget.value} />
-        {/* <input type="date" name="" id="awa" min="1995-06-15" max={getCurrentDate()} pattern="\d{4}-\d{2}-\d{2}" onChange={(e) => setDate(e.target.value)} /> */}
+        <input type="date" name="" id="awa" min="1995-06-16" max={getCurrentDate()} pattern="\d{4}-\d{2}-\d{2}" onChange={(e) => date = e.currentTarget.value} />
         <button type="button" onClick={()=>fetchAPI()}>Search</button>
         <button type="button" onClick={randomDate}>Random</button>
         <button type='button' onClick={resetToToday}>Today</button>
@@ -53,8 +55,8 @@ export function APOD() {
       <div className="content">
         <h1>{data.title}{data.msg}</h1>
         <p>{data.date}</p>
-        <img src={data.hdurl} />
-        <p>Image credits: {data.copyright}</p>
+        {data.hdurl ? <img src={data.hdurl} /> : <iframe src={data.url}></iframe>}
+        {data.copyright&&<p>Image credits: {data.copyright}</p>}
         <p>{data.explanation}</p>
       </div>
     </div>

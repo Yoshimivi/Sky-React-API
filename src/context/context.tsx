@@ -1,10 +1,12 @@
 export type TDataAPOD = {
   title: string;
   date: string;
-  hdurl: string;
+  hdurl?: string; //image url
+  url?: string; //video url
+  media_type: string;
   copyright: string;
   explanation: string;
-  msg?: string;
+  msg?: string; //error message
 }
 
 export type TDateAPOD = {
@@ -22,4 +24,17 @@ export type TDataStars = {
   absolute_magnitude: number;
   distance_light_year: number;
   spectral_class: string;
+}
+
+export type awa = {
+  estimated_diameter: kilodwadawdo
+}
+
+type kilodwadawdo = {
+  kilometers: awdawdadwa
+}
+
+type awdawdadwa = {
+  estimated_diameter_min: number;
+  estimated_diameter_max: number;
 }
