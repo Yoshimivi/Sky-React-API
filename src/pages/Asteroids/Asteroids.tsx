@@ -1,11 +1,11 @@
 import './Asteroids.css'
-import { awa } from '../../context/context'
+import { TDataAsteroids } from '../../types'
 
 
-let aaaa: awa 
+let aaaa: TDataAsteroids 
 export function Asteroids() {
 
   return (
-    <div>{aaaa.estimated_diameter.kilometers.estimated_diameter_min}</div>
+    <div>{aaaa.estimated_diameter.meters.estimated_diameter_min}</div>
   )
 }

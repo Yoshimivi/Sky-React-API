@@ -25,16 +25,3 @@ export type TDataStars = {
   distance_light_year: number;
   spectral_class: string;
 }
-
-export type awa = {
-  estimated_diameter: kilodwadawdo
-}
-
-type kilodwadawdo = {
-  kilometers: awdawdadwa
-}
-
-type awdawdadwa = {
-  estimated_diameter_min: number;
-  estimated_diameter_max: number;
-}
