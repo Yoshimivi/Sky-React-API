@@ -12,7 +12,7 @@
 
 body {
   background-color: black;
-  background-image: url('./background.jpg');
+  background-image: url('../../public/background.jpg');
   background-attachment: fixed;
   background-size: cover;
   color: var(--text-color);
