@@ -6,8 +6,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-block: 3rem;
+  margin: 3rem;
   padding: 2rem; 
+}
+
+.APODContainer nav {
+  margin-bottom: 2rem;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .APODContainer header {
@@ -31,7 +38,8 @@
 }
 
 .APODContainer header input,
-.APODContainer header button {
+.APODContainer header button,
+.APODContainer nav button {
   width: 9rem;
   height: 3rem;
   color: var(--text-color);
@@ -44,7 +52,8 @@
 }
 
 .APODContainer header input:hover,
-.APODContainer header button:hover {
+.APODContainer header button:hover,
+.APODContainer nav button:hover {
   backdrop-filter: none;
   box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.2);
 }
