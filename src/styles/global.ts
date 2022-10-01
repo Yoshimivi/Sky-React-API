@@ -1,0 +1,40 @@
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  :root {
+    --text-color: #e0e0e6;
+    --primary-color: rgba(179, 179, 179, 0.08);
+  }
+
+  body {
+    background-color: black;
+    background-image: url('/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--text-color);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(65, 65, 65);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(160, 160, 160);
+  }
+`

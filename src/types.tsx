@@ -1,19 +1,29 @@
+// export type TDataAsteroids = {
+//   near_earth_objects: TDate;
+//   element_count: number;
+// }
+
+// type TDate = [{
+//   [key: string]: TAsteroidInfo | [];
+// }]
+
 export type TDataAsteroids = {
-  near_earth_objects: TDate;
-}
-
-type TDate = {
-  [key: string]: TAsteroidInfo;
-}
-
-type TAsteroidInfo = {
   name: string;
 	absolute_magnitude_h: number;
   estimated_diameter: TMeasureUnit;
   is_potentially_hazardous_asteroid: boolean;
-  close_approach_data: TCloseApproachData;
+  close_approach_data: TCloseApproachData[];
   is_sentry_object: boolean; // ?????
 }
+
+// type TAsteroidInfo = {
+//   name: string;
+// 	absolute_magnitude_h: number;
+//   estimated_diameter: TMeasureUnit;
+//   is_potentially_hazardous_asteroid: boolean;
+//   close_approach_data: TCloseApproachData;
+//   is_sentry_object: boolean; // ?????
+// }
 
 type TMeasureUnit = {
   kilometers: TEstimatedDiameter;

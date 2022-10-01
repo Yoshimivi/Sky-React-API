@@ -1,11 +1,10 @@
-# Under construction
+# Sky-ReactJS-NASA-API
 
-# Sky-React-API
-
-FrontEnd study of React, Typescript and API use, where you can see the Astronomy Picture of the Day, of a specific date or a random date or see if there's any Asteroids near of Earth.
+FrontEnd study of React, Typescript and using API from NASA, where you can see the Astronomy Picture of the Day, of a specific date or a random date, see if there's any Asteroids near of Earth or navigate through NASA's Image Library.
 
 # Tech Stack
 
-React
+ReactJS
 Typescript
-Css
+Styled Components
+Axios

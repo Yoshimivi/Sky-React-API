@@ -12,14 +12,12 @@
 
 body {
   background-color: black;
-  background-image: url('../../public/background.jpg');
+  background-image: url('/background.jpg');
   background-attachment: fixed;
   background-size: cover;
   color: var(--text-color);
   width: 100vw;
   height: 100vh;
-  /* display: flex;
-  justify-content: end; */
   display: grid;
   place-items: center;
   overflow-x: hidden;
