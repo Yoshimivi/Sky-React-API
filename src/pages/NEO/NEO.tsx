@@ -34,7 +34,7 @@ export function Asteroids() {
     axiosGet()
   }, [date])
 
-
+  
   return (
     <Container>
       <nav>
@@ -55,7 +55,7 @@ export function Asteroids() {
         <h1>{dateString}</h1>
         <h3 className='numberObjects'>Number of objects: {dataAsteroid?.length}</h3>
         <div>
-        {dataAsteroid.map(item=> <AsteroidCard item={item} key={item.name}/>)}
+          {dataAsteroid?.map(item=> <AsteroidCard item={item} key={item.name}/>)}
         </div>
     </Container>
   )
