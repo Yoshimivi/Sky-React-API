@@ -16,6 +16,10 @@ export const ContainerCards = styled.details`
       grid-template-columns: 1fr 1fr;
       gap: 0.2rem;
 
+      @media screen {
+        display: flex;
+      }
+
       span {
         display: block;
         font-weight: 600;

@@ -44,6 +44,9 @@ export function Asteroids() {
         <Link to='/apod'>
           <PageButton>APOD</PageButton>
         </Link>
+        <Link to='/neo'>
+          <PageButton className='active'>NEO</PageButton>
+        </Link>
         <Link to='/library'>
           <PageButton>Library</PageButton>
         </Link>

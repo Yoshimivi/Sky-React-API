@@ -56,6 +56,9 @@ export function Library() {
         <Link to='/neo'>
           <PageButton>NEO</PageButton>
         </Link>
+        <Link to='/library'>
+          <PageButton className='active'>Library</PageButton>
+        </Link>
       </nav>
       <header>
         <input type="text" placeholder="Type any word" value={search} onChange={(e) => setSearch(e.target.value)}/>

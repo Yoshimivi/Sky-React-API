@@ -10,6 +10,15 @@ export const Container = styled.div`
   align-items: center;
   margin: 3rem;
   padding: 2rem; 
+
+  @media (max-width: 1150px) {
+    width: 80vw;
+  }
+
+  @media (max-width: 425px) {
+    width: 95vw;
+    margin: 1rem;
+  }
  
   nav {
     margin-bottom: 2rem;
@@ -17,15 +26,24 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     gap: 2rem;
+
+    @media (max-width: 914px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   header {
-    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    @media (max-width: 914px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   header input:focus {

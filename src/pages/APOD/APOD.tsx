@@ -55,6 +55,9 @@ export function APOD() {
         <Link to='/'>
           <PageButton>Home</PageButton>
         </Link>
+        <Link to='/apod'>
+          <PageButton className='active'>APOD</PageButton>
+        </Link>
         <Link to='/neo'>
           <PageButton>NEO</PageButton>
         </Link>

@@ -11,12 +11,26 @@ export const Container = styled.div`
   margin-block: 3rem;
   padding: 2rem; 
 
+  @media (max-width: 1150px) {
+    width: 80vw;
+  }
+
+  @media (max-width: 425px) {
+    width: 95vw;
+    margin: 1rem;
+  }
+
   nav {
     margin-bottom: 2rem;
     width: 30%;
     display: flex;
     justify-content: space-around;
     gap: 2rem;
+
+    @media (max-width: 914px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   header {
@@ -27,6 +41,12 @@ export const Container = styled.div`
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
+
+    @media (max-width: 425px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      
+    }
   }
 
   header input:focus {
@@ -62,7 +82,7 @@ export const Container = styled.div`
   }
 
   div {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
