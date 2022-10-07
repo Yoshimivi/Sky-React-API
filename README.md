@@ -4,7 +4,7 @@ FrontEnd study of React, Typescript and using API from NASA, where you can see t
 
 # Tech Stack
 
-ReactJS
-Typescript
-Styled Components
-Axios
+- ReactJS
+- Typescript
+- Styled Components
+- Axios
