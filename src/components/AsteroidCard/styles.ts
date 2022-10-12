@@ -16,7 +16,7 @@ export const ContainerCards = styled.details`
       grid-template-columns: 1fr 1fr;
       gap: 0.2rem;
 
-      @media screen {
+      @media (max-width: 650px) {
         display: flex;
       }
 
