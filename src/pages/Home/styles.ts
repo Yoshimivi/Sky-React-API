@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   button {
     width: 15rem;
     height: 7rem; 
@@ -12,6 +17,10 @@ export const Container = styled.div`
     margin: 4rem;
     font-size: 1.5rem;
     font-weight: 700;
+
+    @media (max-width: 1024px) {
+     width: 13rem;
+    }
   }
 
   button:hover {
